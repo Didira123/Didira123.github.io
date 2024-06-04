@@ -14,7 +14,7 @@ const image = $(`.logo img`);
 document.addEventListener(`DOMContentLoaded`, () => {
   const userLocale = navigator.language || navigator.userLanguage;
   const locale = userLocale.replace(`-`, `_`).split(`_`)[0]; // 'en-US' -> 'en'
-  const messages = _locales[locale] ? _locales[locale] : _locales[`en`];
+  const messages = translations[locale] ? translations[locale] : translations[`en`];
 
   // Execution that updates locale texts of html
   $All(`[locale_text]`).forEach((lt) => {

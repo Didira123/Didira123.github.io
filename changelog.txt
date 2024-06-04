@@ -1,6 +1,6 @@
 #04/06/2024
 - Implementação do básico da tela "uninstalled" da extensão "Ads Filter Control" (outro repositório neste usuário) sem todas as funcionalidades.
-- Tradução da tela "uninstalled" utilizando o padrão da pasta "_locales" e identificadores no html "locale_text" para preenchimento via JS. (PS: testável após commit por estar em arquivo local)
+- Tradução da tela "uninstalled" utilizando o padrão da pasta "_locales" e identificadores no html "locale_text" para preenchimento via JS. (PS: testável após commit por estar em arquivo local).
 - Criação deste arquivo "chagelog.txt" para ágil e simplificada visão do todo efetuado em cada commit.
 - Melhorar exibições de todos os tipos usados.
 - Melhorias na organização do código.
@@ -9,6 +9,9 @@
 - Tradução da tela "uninstalled" utilizando o padrão do "_locales", porém através de uma variável "_locales" no arquivo "_locales.js" (GitHub aparentemente não permite execução de arquivos diferentes de HTML, o que impedia recuperar as traduções anteriormente).
 - Melhorar exibições de todos os tipos usados.
 - Melhorias na organização do código.
+
+#04/06/2024 - 3
+- renomeaento da variável "_locales" para translations e do arquivo da mesma para "locales" (remoção do "_").
 
 ????????????? (preparando para o próximo commit)
 - 
