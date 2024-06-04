@@ -5,6 +5,10 @@
 - Melhorar exibições de todos os tipos usados.
 - Melhorias na organização do código.
 
+#04/06/2024 - 2
+- Tradução da tela "uninstalled" utilizando o padrão do "_locales", porém através de uma variável "_locales" no arquivo "_locales.js" (GitHub aparentemente não permite execução de arquivos diferentes de HTML, o que impedia recuperar as traduções anteriormente).
+- Melhorar exibições de todos os tipos usados.
+- Melhorias na organização do código.
 
 ????????????? (preparando para o próximo commit)
 - 

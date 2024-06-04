@@ -97,6 +97,7 @@ main > section > article > p, main > section > article > textarea, .why_removing
     display: flex;
     flex-direction: column;
     line-height: 1.5em;
+    text-align: start;
 }
 
 .reason_type {

@@ -11,49 +11,29 @@ function $All(...args) {
 const image = $(`.logo img`);
 
 // Execution that attempts to load translations and apply them to the page
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener(`DOMContentLoaded`, () => {
   const userLocale = navigator.language || navigator.userLanguage;
-  const locale = userLocale.replace('-', '_').split(`_`)[0]; // 'en-US' -> 'en'
-  const loadTranslations = async (locale) => {
-    const filePath = `../../_locales/${locale}/messages.json`;
-    return await fetch(filePath)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Network response was not \"OK\".`);
-        }
-        return response.json();
-      });
-  };
+  const locale = userLocale.replace(`-`, `_`).split(`_`)[0]; // 'en-US' -> 'en'
+  const messages = _locales[locale] ? _locales[locale] : _locales[`en`];
 
-  loadTranslations(locale)
-    .catch(() => loadTranslations(`en`))
-    .then(messages => {
-      if (messages) {
+  // Execution that updates locale texts of html
+  $All(`[locale_text]`).forEach((lt) => {
+    const locale_text_value = messages[lt.getAttribute(`locale_text`)]?.message;
+    const value = locale_text_value ? locale_text_value : `NO_VALUE`;
+    if (lt.tagName === `TEXTAREA`) {
+      lt.placeholder = value;
+    } else {
+      lt.textContent = value;
+    }
+  });
 
-        // Execution that updates locale texts of html
-        $All(`[locale_text]`).forEach((lt) => {
-          const locale_text_value = messages[lt.getAttribute(`locale_text`)]?.message;
-          const value = locale_text_value ? locale_text_value : `NO_VALUE`;
-          if (lt.tagName === `TEXTAREA`) {
-            lt.placeholder = value;
-          } else {
-            lt.textContent = value;
-          }
-        });
+  // Execution that gets and sets Ads Filter Control logo "alt"
+  if (image) {
+    image.alt = messages[`image_icon_alt`]?.message;
+  }
 
-        // Execution that gets and sets Ads Filter Control logo "alt"
-        if (image) {
-          image.alt = messages[`image_icon_alt`]?.message;
-        }
-
-        // Execution that updates the lang attribute in the html tag
-        document.documentElement.lang = userLocale;
-      }
-    })
-    .catch(error => {
-      console.error(`Error loading translations:`, error);
-    });
-
+  // Execution that updates the lang attribute in the html tag
+  document.documentElement.lang = locale;
 });
 
 if (image) {
