@@ -13,6 +13,12 @@
 #04/06/2024 - 3
 - renomeaento da variável "_locales" para translations e do arquivo da mesma para "locales" (remoção do "_").
 
+#05/06/2024
+- Formulário para pré-envio de um email padronizado para o suporte (de acordo com o locale "en" ou "pt") usando a troca do href da página para "mailto:..." com "subject" e "body", também apresentando um "alert" de erro ao tentar enviar sem qualquer campo;
+- Preenchimento do atributo "value" dos inputs radio também de acordo com o locale ("en" ou "pt");
+- Melhorar exibições de todos os tipos usados.
+- Melhorias na organização do código.
+
 ????????????? (preparando para o próximo commit)
 - 
 - 

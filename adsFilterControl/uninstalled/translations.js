@@ -75,14 +75,17 @@ const translations = {
     "reason-16": {
       "message": "Change of browser or platform."
     },
-    "reason_type-5": {
-      "message": "Other:"
+    "reason-17": {
+      "message": "Other"
     },
     "give_us_details": {
       "message": "Give us more information so we can understand..."
     },
     "questions_and_feedback": {
       "message": "Questions and Feedback"
+    },
+    "questions_and_feedback-text": {
+      "message": "Ask your questions and provide feedback..."
     },
     "send": {
       "message": "Send"
@@ -95,6 +98,15 @@ const translations = {
     },
     "and": {
       "message": "and"
+    },
+    "extension_uninstalled": {
+      "message": "Ads Filter Control Uninstalled"
+    },
+    "reason": {
+      "message": "Reason"
+    },
+    "form_error": {
+      "message": "Error: fill in at least one of the fields."
     }
   },
   "pt": {
@@ -173,14 +185,17 @@ const translations = {
     "reason-16": {
       "message": "Mudança de navegador ou plataforma."
     },
-    "reason_type-5": {
-      "message": "Outro:"
+    "reason-17": {
+      "message": "Outro"
     },
     "give_us_details": {
       "message": "Nos dê mais informações para que possamos entender..."
     },
     "questions_and_feedback": {
       "message": "Perguntas e Feedback"
+    },
+    "questions_and_feedback-text": {
+      "message": "Diga suas perguntas e forneça feedback..."
     },
     "send": {
       "message": "Enviar"
@@ -193,6 +208,15 @@ const translations = {
     },
     "and": {
       "message": "e"
+    },
+    "extension_uninstalled": {
+      "message": "Ads Filter Control Desinstalado"
+    },
+    "reason": {
+      "message": "Razão"
+    },
+    "form_error": {
+      "message": "Erro: preencha ao menos um dos campos."
     }
   }
 };

@@ -70,14 +70,14 @@ main {
     text-shadow: 1px 1px black;
 }
 
-main > section {
+main > form {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     gap: 30px var(--gap-btw-items);
 }
 
-main > section > article:not(.send) {
+main > form > article:not(.send) {
     padding: 25px;
     border-radius: 25px;
     color: var(--item-text-color);
@@ -89,7 +89,7 @@ h2 {
     text-align: center;
 }
 
-main > section > article > p, main > section > article > textarea, .why_removing_extension-reasons {
+main > form > article > p, main > form > article > textarea, .why_removing_extension-reasons {
     margin: 1em 0;
 }
 
@@ -109,11 +109,8 @@ main > section > article > p, main > section > article > textarea, .why_removing
     margin-left: 1em;
 }
 
-.reason_type label {
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	gap: 0.5em;
+.reason_type label input {
+	margin-right: 0.5em;
 }
 
 textarea {
@@ -138,7 +135,7 @@ textarea {
 }
 
 .send button:hover {
-    background-color: #e6e3d9;
+    background-color: #DDCA20;
 }
 
 footer {
@@ -170,7 +167,7 @@ a:hover {
         padding: 50px;
     }
 
-    main > section > article:not(.send) {
+    main > form > article:not(.send) {
         width: 100% !important;
     }
 }
@@ -189,7 +186,7 @@ a:hover {
         padding: 50px 0;
     }
     
-    main > section > article:not(.send) {
+    main > form > article:not(.send) {
         padding: 15px;
     }
 
